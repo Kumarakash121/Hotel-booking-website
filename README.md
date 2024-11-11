@@ -115,44 +115,6 @@ Make a booking and view it in the "My Bookings" section.
 
 Admin users can manage hotel data from the admin dashboard.
 
-## Folder Structure
-
-The folder structure of the project is as follows:
-
-hotel-booking-website/
-├── backend/                # Server-side code
-
-│   ├── controllers/        # Handle HTTP requests
-
-│   ├── models/             # Mongoose models (Hotel, Booking, User, etc.)
-
-│   ├── routes/             # API routes (hotel, booking, auth routes)
-
-│   ├── middleware/         # JWT authentication middleware
-
-│   ├── .env                # Environment variables
-
-│   └── server.js           # Main server entry point
-
-├── frontend/               # Client-side React code
-
-│   ├── src/
-
-│   │   ├── components/     # UI components (Navbar, HotelCard, BookingForm)
-
-│   │   ├── pages/          # React pages (Home, Login, Dashboard, Booking)
-
-│   │   ├── App.js          # Main React component
-
-│   │   └── index.js        # React entry point
-
-│   ├── public/             # Public assets (index.html, images, etc.)
-
-│   └── package.json        # Frontend dependencies
-
-├── .gitignore              # Git ignore file
-
-└── README.md               # Project documentation
 
 Usage
 
