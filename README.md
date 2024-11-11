@@ -1,70 +1,193 @@
-# Getting Started with Create React App
+# Hotel Booking Website (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This is a full-stack Hotel Booking Website built with the MERN Stack (MongoDB, Express, React, Node.js). The platform allows users to browse available hotels, check room availability, make bookings, and manage their reservations.
 
-In the project directory, you can run:
+It offers features like user authentication, hotel search filters, booking management, and a responsive design optimized for both desktop and mobile views.
 
-### `npm start`
+## Features
+# User Authentication: 
+   Register, login, and logout functionality for users.
+# Hotel Search: 
+   Users can search for hotels based on location, price, and rating.
+# Room Availability: 
+   View available rooms based on the selected dates.
+# Booking System: 
+   Users can book rooms by selecting the check-in and check-out dates.
+# Booking Management: 
+   View, cancel, and update bookings.
+# Admin Dashboard: 
+   Admin users can manage hotels, add new rooms, and view all bookings.
+# Responsive Design: 
+   The website is responsive and works well on both desktop and mobile devices.
+## Technologies Used
+# Frontend: 
+   React.js, React Router, Bootstrap (for UI), Axios (for API calls)
+# Backend: 
+   Node.js, Express.js
+# Database: 
+   MongoDB
+# Authentication: 
+   JWT (JSON Web Tokens), bcrypt.js (for password hashing)
+# State Management: 
+   React Context API or Redux (optional)
+# Deployment: 
+   Heroku (for backend), Netlify or Vercel (for frontend)
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure you have the following installed on your machine:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Node.js (v14.x or later)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm (Node Package Manager)
 
-### `npm run build`
+MongoDB (Local or Atlas account)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Step 1: Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/yourusername/hotel-booking-website.git
 
-### `npm run eject`
+cd hotel-booking-website
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Step 2: Install Backend Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the backend folder and install required dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cd backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+## Step 3: Install Frontend Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the frontend folder and install required dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+cd frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+npm install
 
-### Analyzing the Bundle Size
+## Step 4: Configure Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create a .env file in the backend directory with the following variables:
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+PORT=5000
 
-### Advanced Configuration
+MONGO_URI=mongodb://localhost:27017/hotel-booking
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+JWT_SECRET=your-jwt-secret-key
 
-### Deployment
+Replace MONGO_URI with your MongoDB connection string. If you're using MongoDB Atlas, you can find the connection URI in your Atlas dashboard.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Set a secret key for JWT-based authentication (this should be a random string).
 
-### `npm run build` fails to minify
+## Step 5: Start the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run the backend server:
+
+cd backend
+
+npm start
+
+Run the frontend application:
+
+cd frontend
+
+npm start
+
+The frontend will typically run on http://localhost:3000 and the backend on http://localhost:5000.
+
+
+## Step 6: Testing
+
+The application should be fully functional after installation. You can test the following:
+
+
+Register a new user and login.
+
+Search for available hotels.
+
+Make a booking and view it in the "My Bookings" section.
+
+Admin users can manage hotel data from the admin dashboard.
+
+## Folder Structure
+
+The folder structure of the project is as follows:
+
+hotel-booking-website/
+├── backend/                # Server-side code
+
+│   ├── controllers/        # Handle HTTP requests
+
+│   ├── models/             # Mongoose models (Hotel, Booking, User, etc.)
+
+│   ├── routes/             # API routes (hotel, booking, auth routes)
+
+│   ├── middleware/         # JWT authentication middleware
+
+│   ├── .env                # Environment variables
+
+│   └── server.js           # Main server entry point
+
+├── frontend/               # Client-side React code
+
+│   ├── src/
+
+│   │   ├── components/     # UI components (Navbar, HotelCard, BookingForm)
+
+│   │   ├── pages/          # React pages (Home, Login, Dashboard, Booking)
+
+│   │   ├── App.js          # Main React component
+
+│   │   └── index.js        # React entry point
+
+│   ├── public/             # Public assets (index.html, images, etc.)
+
+│   └── package.json        # Frontend dependencies
+
+├── .gitignore              # Git ignore file
+
+└── README.md               # Project documentation
+
+Usage
+
+
+## 1. User Registration and Login
+Navigate to the Login or Register page.
+Fill in the required details (name, email, password).
+After successful registration, log in with your credentials.
+
+## 2. Hotel Search
+Use the search bar to find hotels by location, price, and rating.
+Filters can be applied to narrow down the search results.
+
+## 3. Booking a Room
+Select a hotel from the search results.
+Choose a room and select the check-in and check-out dates.
+Proceed with the booking and confirm the reservation.
+
+## 4. Admin Dashboard (for Admin Users)
+Admin users can log in and access the Admin Dashboard.
+Admins can add new hotels, manage hotel rooms, and view/manage bookings.
+
+## 5. Booking Management
+After making a booking, users can view and manage their bookings from the "My Bookings" page.
+Users can cancel their bookings if needed.
+
+
+Contributing
+If you'd like to contribute to this project, feel free to fork it and submit pull requests. Here are a few ways you can help:
+
+Add new features (e.g., room photos, multi-language support).
+
+Improve the UI/UX design.
+
+Fix any bugs or issues.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
